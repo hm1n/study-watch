@@ -1,0 +1,93 @@
+/** @format */
+@font-face {
+  font-family: 'MoneyGraphy';
+  src: url('../assets/fonts/Moneygraphy-Pixel.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Mulmaru';
+  src: url('../assets/fonts/Mulmaru.woff2') format('woff2');
+}
+
+:root {
+  font-family: 'MoneyGraphy', 'Mulmaru', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color: #000000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background-image: url('/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  font-size: 1.4em;
+  padding: 0.5em 1.5em;
+  border: 4px solid #242424;
+  border-radius: 12px;
+  background-color: #1daf62;
+  color: #242424;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+  font-family: 'MoneyGraphy';
+
+  &:hover {
+    background-color: #1c8a4f;
+    color: #fff;
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    color: #242424;
+    cursor: not-allowed;
+  }
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#title {
+  color: #1daf62;
+  margin-bottom: 0.2rem;
+}
+
+#watch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+#time {
+  font-size: 6em;
+  line-height: 1.1;
+  font-family: 'Mulmaru';
+  color: #000000;
+  padding: 1rem;
+}
