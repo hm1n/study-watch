@@ -23,6 +23,9 @@
 }
 
 body {
+  width: 100%;
+  height: 100%;
+
   margin: 0;
   display: flex;
   place-items: center;
@@ -65,8 +68,40 @@ button {
   }
 }
 
+main {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  height: 60px;
+  margin-top: 2rem;
+  font-size: 0.9em;
+  color: rgba(1, 1, 1, 0.5);
+}
+
+a {
+  color: #307952;
+  text-decoration: none;
+  &:hover {
+    color: #17b55e;
+    text-decoration: underline;
+  }
+}
+
 #app {
   max-width: 1280px;
+  height: 100svh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -81,6 +116,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 
