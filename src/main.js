@@ -3,15 +3,14 @@
 import './style/reset.css';
 import './style/style.css';
 import { render as watchRender } from './components/watch.js';
-import { render as dateRender } from './components/date.js';
+import { render as memoRender } from './components/memo.js';
 
 const app = document.querySelector('#app');
 
 app.innerHTML = `
   <main class="container">
-    <h3 id="title">인프런 작심삼일 챌린지 🌱</h3>
-    <div id="date"></div>
     <section id="watch"></section>
+    <section id="memo"></section>
   </main>
   <footer>
     <div>🌱 인프런 작심삼일 챌린지를 위한 스탑워치</div>
@@ -22,7 +21,7 @@ app.innerHTML = `
   </footer>
 `;
 
-const dateContainer = document.querySelector('#date');
 const watchContainer = document.querySelector('#watch');
-dateRender(dateContainer);
+const memoContainer = document.querySelector('#memo');
 watchRender(watchContainer);
+memoRender(memoContainer);

@@ -9,6 +9,10 @@
   src: url('../assets/fonts/Mulmaru.woff2') format('woff2');
 }
 
+html {
+  height: 100%;
+}
+
 :root {
   font-family: 'MoneyGraphy', 'Mulmaru', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.6;
@@ -24,18 +28,19 @@
 
 body {
   width: 100%;
-  height: 100%;
+  max-width: 1280px;
+  min-height: 100vh;
+  min-width: 320px;
+  margin: 0 auto;
 
-  margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 
   background-image: url('/bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -69,13 +74,25 @@ button {
 }
 
 main {
-  flex: 1;
-  display: flex;
   width: 100%;
   height: 100%;
+  max-width: 1280px;
+  min-width: 320px;
+
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+main section {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 footer {
@@ -95,8 +112,12 @@ a {
 }
 
 #app {
+  width: 100%;
+  height: 100%;
+
   max-width: 1280px;
-  height: 100svh;
+  min-height: 100vh;
+  min-width: 320px;
 
   display: flex;
   flex-direction: column;
@@ -112,18 +133,30 @@ a {
   margin-bottom: 0.2rem;
 }
 
-#watch {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-
 #time {
   font-size: 6em;
   line-height: 1.1;
   font-family: 'Mulmaru';
   color: #000000;
   padding: 1rem;
+}
+
+textarea#memo {
+  width: 100%;
+  height: 200px;
+  min-width: 320px;
+  max-width: 720px;
+
+  padding: 2rem;
+  color: white;
+  background-color: rgba(11, 10, 24, 0.789);
+  border: 2px solid #242424;
+  border-radius: 12px;
+  font-size: 3em;
+  font-family: 'MoneyGraphy';
+  resize: none;
+
+  &:focus {
+    outline: none;
+  }
 }
