@@ -156,7 +156,8 @@ a {
   font-family: 'MoneyGraphy';
   resize: none;
 
-  &:focus {
-    outline: none;
+  &:focus-visible {
+    outline: 4px solid #1daf62;
+    outline-offset: 1px;
   }
 }
