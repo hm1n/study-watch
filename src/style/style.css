@@ -9,6 +9,10 @@
   src: url('../assets/fonts/Mulmaru.woff2') format('woff2');
 }
 
+html {
+  height: 100%;
+}
+
 :root {
   font-family: 'MoneyGraphy', 'Mulmaru', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.6;
@@ -23,16 +27,20 @@
 }
 
 body {
+  width: 100%;
+  min-height: 100vh;
+  min-width: 320px;
   margin: 0;
+
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
 
   background-image: url('/bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -65,8 +73,56 @@ button {
   }
 }
 
-#app {
+main {
+  width: 100%;
+  height: 100%;
   max-width: 1280px;
+  min-width: 320px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main section {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+footer {
+  height: 60px;
+  margin-top: 2rem;
+  font-size: 0.9em;
+  color: rgba(1, 1, 1, 0.5);
+}
+
+a {
+  color: #307952;
+  text-decoration: none;
+  &:hover {
+    color: #17b55e;
+    text-decoration: underline;
+  }
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+
+  max-width: 1280px;
+  min-height: 100vh;
+  min-width: 320px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -77,17 +133,31 @@ button {
   margin-bottom: 0.2rem;
 }
 
-#watch {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-
 #time {
   font-size: 6em;
   line-height: 1.1;
   font-family: 'Mulmaru';
   color: #000000;
   padding: 1rem;
+}
+
+#memo-textarea {
+  width: 100%;
+  height: 200px;
+  min-width: 320px;
+  max-width: 720px;
+
+  padding: 2rem;
+  color: white;
+  background-color: rgba(11, 10, 24, 0.789);
+  border: 2px solid #242424;
+  border-radius: 12px;
+  font-size: 3em;
+  font-family: 'MoneyGraphy';
+  resize: none;
+
+  &:focus-visible {
+    outline: 4px solid #1daf62;
+    outline-offset: 1px;
+  }
 }

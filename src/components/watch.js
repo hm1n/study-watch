@@ -7,8 +7,13 @@ export function render(container) {
   const watch = new Watch();
   let intervalId = null;
 
+  const date = new Date();
+  const weekday = ['일', '월', '화', '수', '목', '금', '토'][date.getDay()];
+
   container.innerHTML = `
     <div>
+      <h3 id="title">인프런 작심삼일 챌린지 🌱</h3>
+      <h2 id='date'>${date.toLocaleDateString()} (${weekday})</h2>
       <h1 id='time'>00:00:00</h1>
       <div class="buttons">
         <button class="start">시작</button>
